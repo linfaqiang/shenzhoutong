@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>神州通-我的消息</title>
+	    <meta name="description" content="">
+		<meta name="Keywords" content="">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.min.css"/>
+		<link rel="stylesheet" href="../css/global/rest.css">
+		<link rel="stylesheet" type="text/css" href="../css/myMessage.css"/>
+		
+		<script type="text/javascript" charset="UTF-8">
+			var win = window,doc = document;
+			function setFontSize() {
+			　　var winWidth = window.innerWidth;
+				winWidth = winWidth<320 ? 320 : winWidth;
+			　　doc.documentElement.style.fontSize = (((winWidth>640?640:winWidth) / 640) * 100) + 'px';
+			};
+			setFontSize();
+			win.onresize=setFontSize;
+   		</script>
+	</head>
+	<body>
+		
+		<div class="myMessage">
+			<!-- <div class="head fexid">
+		     	<a href="javascript:history.go(-1);;"></a>
+		     	<span>我的消息</span>
+			</div> -->
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<!--数据列表-->
+					<ul class="mui-table-view mui-table-view-chevron messageList">
+						
+					</ul>
+				</div>
+			</div>
+			<!-- <ul class="messageList">
+				<li>
+					<a href="changeFood.html">
+						<p  class="msgDate"><span>2017-01-15 10:00:00</span></p>
+						<div class="pr">
+							<div class="icon">
+								<img src="../images/icon/a.png"/>
+							</div>
+							<div class="txt">
+								<div><span>来自【服务员】缺菜提醒消息</span> <span class="red">缺菜提醒</span></div>
+								<div>用餐时间：17-01-05 12:20</div>
+								<p>用餐人数：5人 <span class="fr">用餐地点：餐厅</span></p>
+								<p> 备注：缺菜 </p>
+							</div>	
+						</div>	
+					</a>
+				</li>
+				
+				<li>
+					<a href="signBill.html">
+						<p class="msgDate"><span>2017-01-15 10:00:00</span></p>
+						<div class="pr">
+							<div class="icon">
+								<img src="../images/icon/b.png"/>
+							</div>
+							<div class="txt">
+								<div><span>来自【服务员】缺菜提醒消息</span> <span class="red">待签单</span></div>
+								<div>用餐时间：17-01-05 12:20</div>
+								<p>用餐人数：5人 <span class="fr">用餐地点：餐厅</span></p>
+								<p> 备注：缺菜<span class="msgDate">2017-01-15 10:00:00</span> </p>
+							</div>
+						</div>	
+					</a>
+				</li>
+				
+				
+				<li>
+					<a href="seeOrdering.html">
+						<p  class="msgDate"><span>2017-01-15 10:00:00</span></p>
+						<div class="pr">
+							<div class="icon">
+								<img src="../images/icon/c.png"/>
+							</div>
+							<div class="txt">
+								<div><span>来自【服务员】缺菜提醒消息</span> <span class="red">取消被拒绝</span></div>
+								<div>用餐时间：17-01-05 12:20</div>
+								<p>用餐人数：5人 <span class="fr">用餐地点：餐厅</span></p>
+								<p> 备注：缺菜 </p>
+							</div>		
+						</div>	
+					</a>
+				</li>
+
+			</ul> -->
+		</div>
+		
+		<script src="../libs/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+         		up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 10)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i + 20; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+
+						li.innerHTML = `<a href="seeOrdering.html">
+						<p  class="msgDate"><span>2017-01-15 10:00:00</span></p>
+						<div class="pr">
+							<div class="icon">
+								<img src="../images/icon/c.png"/>
+							</div>
+							<div class="txt">
+								<div><span>来自【服务员】缺菜提醒消息</span> <span class="red">取消被拒绝</span></div>
+								<div>用餐时间：17-01-05 12:20</div>
+								<p>用餐人数：5人 <span class="fr">用餐地点：餐厅</span></p>
+								<p> 备注：缺菜 </p>
+							</div>		
+						</div>	
+					</a>`;
+
+
+
+						table.appendChild(li);
+					}
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+                    $(document).on('tap','.agree',function(){
+                        window.location.href="waiter-orderInfo.html";
+					});
+				});
+			}
+
+		</script>
+		
+	</body>
+</html>

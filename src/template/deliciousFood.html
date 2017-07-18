@@ -1,0 +1,657 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>神州通-菜单</title>
+	    <meta name="description" content="">
+		<meta name="Keywords" content="">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="../css/global/rest.css">
+		<link rel="stylesheet" type="text/css" href="../css/deliciousFood.css"/>
+<!--		<link rel="stylesheet" type="text/css" href="../css/libs/mui.min.css"/>-->
+		
+		<script type="text/javascript" charset="UTF-8">
+			var win = window,doc = document;
+			function setFontSize() {
+			　　var winWidth = window.innerWidth;
+			winWidth = winWidth<320 ? 320 : winWidth;
+			　　doc.documentElement.style.fontSize = (((winWidth>640?640:winWidth) / 640) * 100) + 'px';
+			};
+			setFontSize();
+ 			win.onresize=setFontSize;
+   		</script>
+	</head>
+	<body>
+		
+		<div class="foodMenu">
+			<div class="head fexid">
+			     <a href="javascript:history.go(-1);"></a>
+			     <span>点菜</span>
+			</div>
+			
+			<div class="content">
+				
+				<div class="leftM">
+					<ul>
+						<li class="all active"><span>所有</span><i class="none">0</i></li>
+						<li value_id="1"><span>主菜</span><i class="none">0</i></li>
+						<li value_id="2"><span>凉菜</span><i class="none">0</i></li>
+						<li value_id="3"><span>青菜</span><i class="none">0</i></li>
+						<li value_id="4"><span>汤品</span><i class="none">0</i></li>
+						<li value_id="5"><span>酒水</span><i class="none">0</i></li>
+						<li value_id="6"><span>其它</span><i class="none">0</i></li>
+					</ul>
+					
+				</div>
+				<div class="rightList">
+					<ul data-id="1">
+						<li  value_id="11">
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾1</p>
+									<p class="detail">清蒸、红烧</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0"/>
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						<li  class="hot" value_id="11">
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0" />
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						
+					</ul>
+
+					<ul data-id="2">
+						<li class="hot">
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">水煮鱼2</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0"/>
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0" />
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						
+					</ul>
+
+					<ul data-id="3">
+						<li class="hot">
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾3</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0"/>
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0" />
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						
+					</ul>
+
+					<ul data-id="4">
+						<li class="hot">
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾4</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0"/>
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0" />
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						
+					</ul>
+
+					<ul data-id="5">
+						<li class="hot">
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾5</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0"/>
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0" />
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						
+					</ul>
+
+					<ul data-id="6">
+						<li class="hot">
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾6</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0"/>
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						<li>
+							<div class="menuInfo">
+								<div class="img">
+									<img src="../images/u474.png"/>
+								</div>
+								
+								<div class="dscrption">
+									<p class="name">小龙虾</p>
+									<div class="spicy">
+										<span class="active">微辣</span>
+										<span>正常</span>
+										<span>超辣</span>
+									</div>
+									<div class="flavor">
+										<span class="active">清淡</span>
+										<span>正常</span>
+										<span>偏咸</span>
+									</div>
+								</div>
+							</div>								
+							<div class="num">
+								<div class="zan">
+									100
+								</div>
+								
+								<div class="mui-numbox" >
+								  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+								  <input class="mui-numbox-input" type="number" value="0" />
+								  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+								</div>
+								
+								<div class="Price">
+									￥<span>100</span>/份
+								</div>
+							</div>
+							
+						</li>
+						
+					</ul>
+				</div>
+				
+				
+				<div class="fixdBottom">
+					<div class="txt">已选: <span id="cont">--</span>份 <b> | </b>应付: ￥<span id="money">--</span>元</div>
+					<div class="sbmit">
+						提交
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		<script src="../libs/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+			$('.num').each(function(){
+				if($(this).find('input').val()-0===0){
+					$(this).find('.mui-numbox-btn-minus').hide().next().hide();
+				}
+			});
+			$(function(){
+				var count= 0;
+				var dataList=[];
+				var cont = $('#cont'), moneyEle = $('#money');
+				$('.mui-numbox-btn-plus').on('click', function(){
+					var nub = $(this).parent().find('input').val()-0;
+					nub++;
+					$(this).parent().find('input').val(nub);
+					$(this).prevAll().fadeIn();
+					var allNum = 0,money = 0;
+					$(this).parents('.rightList').find('.mui-numbox-input').each(function(){
+						allNum = ($(this).val()-0)+allNum;
+						money = ($(this).parents('.num').find('.Price span').html()-0)*($(this).val()-0) + money;
+					});
+					cont.html(allNum);
+					moneyEle.html(money);
+					$('.fixdBottom').animate({'bottom':0});
+					var index=$(this).parents('ul').attr('data-id');
+					var inum=parseInt($('.leftM ul li').eq(index).find('i').html());
+					    count=inum+1;
+					$('.leftM ul li').eq(index).find('i').removeClass('none').html(count);
+				});
+				$('.mui-numbox-btn-minus').on('click', function(){
+					var nub = $(this).parent().find('input').val()-0;
+					nub--;
+					nub = nub<=0?0:nub;
+					$(this).parent().find('input').val(nub);
+					if(nub===0){
+						$(this).hide().next().hide();
+					}
+					var allNum = 0,money = 0;
+					$(this).parents('.rightList').find('.mui-numbox-input').each(function(){
+						allNum = ($(this).val()-0)+allNum;
+						money = ($(this).parents('.num').find('.Price span').html()-0)*($(this).val()-0) + money;
+					});
+					if(allNum === 0 ){
+						$('.fixdBottom').animate({'bottom':'-1rem'});
+					}
+					cont.html(allNum);
+					moneyEle.html(money);
+					var index=$(this).parents('ul').attr('data-id');
+					var inum=parseInt($('.leftM ul li').eq(index).find('i').html());
+					var count=inum-1;
+                    $('.leftM ul li').eq(index).find('i').removeClass('none').html(count);
+                    if(parseInt($('.leftM ul li').eq(index).find('i').html())<1){
+                    	$('.leftM ul li').eq(index).find('i').addClass('none');
+                    }
+                    
+				});
+				
+				
+				$('.spicy,.flavor').on('click', 'span', function(){
+					$(this).addClass('active').attr('flag',true).siblings().removeClass('active').attr('flag',false);
+					
+				});
+			
+			// 计算份数于数量
+				
+				$('.leftM').on('click', 'li', function(){
+					if($(this).index()==0){
+                         $('.rightList ul').show();
+                         $(this).addClass('active').siblings().removeClass('active');
+					}else{
+						$(this).addClass('active').siblings().removeClass('active');
+					    $('.rightList ul').hide().eq($(this).index()-1).show();
+					}
+				});
+				
+				
+				$('.sbmit').on('click', function(){
+
+	        		//window.location.href = 'orderingInfo.html';
+                    /*点击提交获取数据*/
+	        		$('.leftM ul li').each(function(index){
+                       var content=[];
+	        		   var dataItem={};				       
+                       var _num=parseInt($('.leftM ul li').eq(index).find('i').html());
+                       if(_num!=0){
+                          dataItem.name=$('.leftM ul li').eq(index).children('span').html();
+	                      dataItem.id=$('.leftM ul li').eq(index).attr('value_id');
+	                      dataItem.num=parseInt($('.leftM ul li').eq(index).find('i').html());
+
+                        $('.rightList ul').eq(index-1).children('li').each(function(item){
+                          var second={};
+                          var _put=$('.rightList ul').eq(index-1).children('li').eq(item).find('input').val();
+                          if(_put!=0){
+                          	second.name=$('.rightList ul').eq(index-1).children('li').eq(item).find('p').html();
+                            second.id=$('.rightList ul').eq(index-1).children('li').attr('value_id');
+                            second.price=$('.rightList ul').eq(index-1).children('li').children('.num').find('span').html();
+                            second.num=$('.rightList ul').eq(index-1).children('li').eq(item).find('input').val();
+                            content.push(second);
+                          }                        
+                          
+                        });
+                          //console.log(dataItem);
+                          dataItem.content=content;
+	                      dataList.push(dataItem);
+
+                       }
+	        		});
+	        		
+                    console.log(dataList);
+				});
+
+
+				
+				
+			});
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

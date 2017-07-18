@@ -1,0 +1,238 @@
+@import 'common';
+body,html{
+    width:100%;
+    height:100%;
+}
+.foodMenu{
+    .head{
+        .head;
+    }
+    
+    .content{
+       
+        height:100%;
+//      position: fixed;
+        width: 100%;
+    }
+    .leftM{
+//      float: left;
+        position: fixed;
+        left: 0;
+        background-color: #eaeaea;
+        top:.8rem;
+        height:100%;
+        width: 1.3rem;
+        
+        .all{
+//          border-top: 1px solid #ccc;
+        }
+        li{
+            
+            padding:.3rem;
+            position: relative;
+            text-align: center;
+            background: #EAEAEA;
+            font-size: .24rem;
+            &.active{
+                background: #fff;
+                border-left: 3px solid @headColor;
+            }
+            
+            i{
+                position: absolute;
+                background-color: #f00;
+                font-style: normal;
+                font-size: .16rem;
+                color:#fff;
+                width:.25rem;
+                height: .25rem;
+                line-height: .25rem;
+                border-radius: 50%;
+                top:.1rem;
+                right:.18rem;
+                text-align: center;
+            }
+            
+        }
+        
+        
+        
+    }
+    .rightList{
+        padding-left: 1.3rem;
+        padding-top: .8rem;
+        padding-bottom: 1rem;
+        li{
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid #eaeaea;
+            &:last-child{
+                border-bottom: none;
+            }
+            &.hot:after{
+                content: '';
+                position: absolute;
+                top:-.26rem;
+                right: -.29rem;
+                width:1rem;
+                height:1rem;
+                transform: rotateZ(45deng);
+                -webkit-transform: rotateZ(45deg);
+                background: url(../images/hot.png) no-repeat top right;
+                background-size: 1rem;
+                background-position-y: .4rem;
+                
+            }
+        }
+    }
+    
+    .menuInfo{
+        .img{
+            padding:.1rem;
+            float: left;
+            width:1.6rem;
+                height: 1.6rem;
+            img{
+                width:100%;
+                height: 100%;
+                
+            }
+        }
+        span.active{
+                 border:1px solid @headColor !important;
+             
+        }
+        .dscrption{
+            padding-left: 1.6rem;
+            div{
+                padding:.12rem 0;
+                span{
+                    border:1px solid #eaeaea;
+                    font-size: .18rem;
+                    padding: 0.05rem .18rem;
+                    margin-right: .1rem;
+                    border-radius: 2px;
+                    cursor: pointer;
+                 
+                }
+            }
+            .name{
+                padding:.18rem 0 0.05rem 0;
+                font-weight: bold;
+            }
+        }
+       
+    }
+     .num{
+         
+        .zan{
+            float: left;
+            margin-left: .1rem;
+            font-size: .24rem;
+            background: url(../images/goodicon_u466.png) no-repeat;
+            -webkit-background-size:.27rem .28rem ;
+            background-size: .27rem .28rem;
+            padding:.05rem 0;
+            padding-left: .29rem;
+        }  
+         .mui-numbox{
+             float: right;
+             margin-right: .1rem;
+         }
+         
+         .Price{
+             text-align: center;
+            font-size: .24rem;
+            padding-top:.05rem;
+         }
+         
+         
+         
+        padding:.2rem;
+            input{
+                display:inline-block;
+                overflow: hidden;
+                width:.36rem;
+                height: .3rem;
+                font-size: .26rem;
+                margin: 0;
+                text-align: center;
+                border: none!important;
+                background-color: #fff;
+                border-radius: 0!important;
+                text-rendering: auto;
+                pointer-events: none;
+                color: initial;
+                letter-spacing: normal;
+                word-spacing: normal;
+                text-transform: none;
+                text-indent: 0px;
+                text-shadow: none;
+                 -webkit-appearance: none;
+                 -moz-appearance:textfield;
+             }
+             input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance: none !important;}
+             
+             button{
+                 display: inline-block;
+                 width:.38rem;
+                 height:.38rem;
+                 border:none;color:#fff;
+                 border-radius: 50%;
+                 line-height: .3rem;cursor: pointer;
+                 font-size: .28rem;
+                 background-color: @headColor;
+             }
+             button:focus{
+                 
+                 outline: none;
+             }
+            .mui-numbox{
+                margin-top: -0.05rem;
+                width:1.3rem;
+                text-align: center;
+            }
+        }     
+        
+    .fixdBottom{
+        position: fixed;
+        bottom: -1rem;
+        z-index: 2;
+        display: box;
+        display: -ms-flexbox;
+        background-color: #fff;
+        width:100%;
+        display: flex;
+        display: -webkit-flex;
+        -ms-flex-pack: center;
+        justify-content:space-between;
+        -webkit-justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-align-items: center;
+        padding: .15rem;
+        .sbmit{
+            width:1.5rem;
+            background-color: @headColor;
+            color: #fff;
+            padding:.2rem 0;
+            text-align: center;
+            border-radius:3px;
+        }
+        .txt{
+            margin-left: .1rem;
+        }
+        b{
+            margin: 0 .1rem;
+        }
+    }
+    
+    .fexid{
+        width:100%;
+        left: 0;
+        position: fixed;
+        top:0;
+        z-index: 2;
+    }  
+   
+}

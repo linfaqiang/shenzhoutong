@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>神州通-待结算列表</title>
+	    <meta name="description" content="">
+		<meta name="Keywords" content="">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="../css/global/rest.css">
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/myOrder.css"/>
+		
+		<script type="text/javascript" charset="UTF-8">
+			var win = window,doc = document;
+			function setFontSize() {
+			　　var winWidth = window.innerWidth;
+			　　doc.documentElement.style.fontSize = (((winWidth>640?640:winWidth) / 640) * 100) + 'px';
+			};
+			setFontSize();
+			win.onresize=setFontSize;
+   		</script>
+	</head>
+	<body>
+		
+		<div class="myOrder">
+			<div class="head">
+			     <a class="blank" href="javascript:history.go(-1);;"></a>
+			     <span>我的订餐</span>
+			     <a href="orderingInfo.html" class="goDing">订餐</a>
+			</div>
+		
+			<ul class="orderList">
+			    <!--onclick="window.location.href='seeOrdering.html'"-->
+				<li>
+					
+						<div class="userP">
+							<span class="name">点餐人：<i>mavis</i></span>
+							<span>待付款</span>
+						</div>
+						<p>订餐时间:2016年11月25日 11:38:25</p>
+						<div class="userM">
+							<span>用餐时间:2016年11月25日 11:38:25</span>
+							<span class="mony">金额：<i>1000</i></span>
+						</div>
+						<div class="status">
+							<a href="seeOrdering.html">查看</a>
+						</div>
+				</li>
+				
+				<li>
+					<div class="userP">
+						<span class="name">点餐人：<i>mavis</i></span>
+						<span>待付款</span>
+						<span><input type="checkbox"></span>
+					</div>
+					<p>订餐时间:2016年11月25日 11:38:25</p>
+					<div class="userM">
+						<span>用餐时间:2016年11月25日 11:38:25</span>
+						<span class="mony">金额：<i>1000</i></span>
+					</div>
+					<div class="status">
+						<a href="changeFood.html">付款</a>
+						<a href="changeFood.html">查看</a>
+					</div>
+				</li>
+				
+				<li>
+					<div class="userP">
+						<span class="name">点餐人：<i>mavis</i></span>
+						<span>待付款</span>
+					</div>
+					<p>订餐时间:2016年11月25日 11:38:25</p>
+					<div class="userM">
+						<span>用餐时间:2016年11月25日 11:38:25</span>
+						<span class="mony">金额：<i>1000</i></span>
+					</div>
+					<div class="status">
+						<a href="signBill.html">查看</a>
+						
+					</div>
+				</li>
+				
+				<li>
+					<div class="userP">
+						<span class="name">点餐人：<i>mavis</i></span>
+						<span>待付款</span>
+					</div>
+					<p>订餐时间:2016年11月25日 11:38:25</p>
+					<div class="userM">
+						<span>用餐时间:2016年11月25日 11:38:25</span>
+						<span class="mony">金额：<i>1000</i></span>
+					</div>
+					<div class="status">
+						<a href="seeOrdering.html">查看</a>
+						
+					</div>
+				</li>
+			</ul>
+		
+			<!-- <div class="fixd">
+				<a href="javascript:alert('显示所有列表')">我的订餐</a>
+				<a href="javascript:alert('显示未完成列表')">未完成</a>
+				<a href="javascript:alert('显示待签单列表')">待签单</a>
+			</div> -->
+			<div class="fixd">未付款合计：<span>100</span>元</div>
+		    <div class="fixd2">
+              <div class="content-wrap">
+                 <p>待付款：<span>100.00</span>元</p>
+                 <p>未付款合计：<span>100.00</span>元</p>
+              </div>
+              <div class="btn-wrap">
+                 <a href="javascript:;">结算</a>
+              </div>
+		    </div>
+		
+			
+		</div>
+		<script src="../libs/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+          $(function(){
+          	 $('.orderList li').find(':checkbox').on('click',function(){
+          	 	if($(this).prop('checked')){
+          	 	   $('.fixd').stop().animate({bottom: '-1rem'}, 500);
+          	 	   $('.fixd2').stop().animate({bottom: 0}, 500);
+          	 	}else{
+          	 	   $('.fixd').stop().animate({bottom: 0}, 500);
+          	 	   $('.fixd2').stop().animate({bottom: '-1rem'}, 500);
+          	 	}
+          	 });
+          });
+		</script>
+		
+		
+	</body>
+</html>

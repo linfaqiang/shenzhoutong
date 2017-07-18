@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+html * {
+	-webkit-outline: none;
+	outline: 0;
+	-webkit-tap-highlight-color: rgba(255,255,255,0);
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p{margin:0;padding:0}
+input,button,select,textarea{outline:none}
+ol,ul,li{list-style:none}
+h1,h2,h3,h4,h5,h6 {font-weight:normal}
+a{text-decoration:none;cursor:pointer;}
+a:hover{text-decoration:none;}
+a:focus{outline:0;}
+.c:after{content:".";display:block;font-size:0;height:0;clear:both;visibility:hidden}
+.c{zoom:1}
+.fl{float: left;}
+.rt{float: right;}
+.clear{clear: both;}
+.dn,.dsn{display:none;}
+.tal { text-align:left}
+.tac { text-align:center}
+.tar { text-align:right}
+
+.arr_b_blue{display:block; height: .25rem;line-height: .25rem; padding-left: .34rem; position: relative;}
+.arr_b_blue:before,.arr_b_blue:after{content:"";display:block;position:absolute;left:0;top:.12rem;width:.22rem;height:.02rem; background: #13afe2;
+transform:rotate(50deg);
+-ms-transform:rotate(50deg);
+-moz-transform:rotate(50deg);
+-webkit-transform:rotate(50deg);
+-o-transform:rotate(50deg);
+}
+.arr_b_blue:after{left:.14rem;
+transform:rotate(-50deg);
+-ms-transform:rotate(-50deg);
+-moz-transform:rotate(-50deg);
+-webkit-transform:rotate(-50deg);
+-o-transform:rotate(-50deg);
+}
+
+html,body{background:#fff; font-family: "Microsoft Yahei"; color: #666}
+.wrap{width: 100%; margin: 0 auto; overflow: hidden; font-size: .2rem;}

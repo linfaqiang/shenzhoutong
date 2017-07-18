@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="en" style="font-size:50px;">
+<head>
+  <meta charset="UTF-8">
+  <title>菜品管理</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <link rel="stylesheet" type="text/css" href="../css/libs/wappublic.css">
+  <link rel="stylesheet" type="text/css" href="../css/adminDeshes.css">
+  <script type="text/javascript" src="../libs/fontSize.js"></script>
+  <script type="text/javascript" src="../libs/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+       <h1>菜品管理</h1>
+       <b onclick="javascript:history.go(-1);"></b>
+       <a href="addDeshes.html">添加菜品</a>
+    </header>
+    <!--nav-->
+    <nav>
+      <ol>
+        <li class="active"><a href="javascript:;">在售菜品</a></li>
+        <li><a href="javascript:;">缺菜菜品</a></li>
+      </ol>
+    </nav>
+    <!--section-->
+    <section class="section1">
+      <!--nav-->
+      <div class="nav">
+        <ol>
+          <li><a class="active" href="javascript:;">主菜</a></li>
+          <li><a href="javascript:;">凉菜</a></li>
+          <li><a href="javascript:;">青菜</a></li>
+          <li><a href="javascript:;">汤品</a></li>
+          <li><a href="javascript:;">酒水</a></li>
+          <li><a href="javascript:;">其他</a></li>
+        </ol>
+      </div>
+      <!--main-->
+      <div class="shop-menu">
+        <!--大型花卉菜单-->
+        <div class="big-wrap" style="display: block;">
+         <ul class="img-list">
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                 <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾1</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+         </ul>
+         <div class="more-container">
+          <a href="javascript:;">滑动加载更多&gt;&gt;</a>
+        </div>
+      </div>
+
+      <div class="big-wrap">
+         <ul class="img-list">
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾2</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+         </ul>
+         <div class="more-container">
+          <a href="javascript:;">滑动加载更多&gt;&gt;</a>
+        </div>
+      </div>
+
+      <div class="big-wrap">
+         <ul class="img-list">
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾3</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn first-list">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+         </ul>
+         <div class="more-container">
+          <a href="javascript:;">滑动加载更多&gt;&gt;</a>
+        </div>
+      </div>
+
+      <div class="big-wrap">
+         <ul class="img-list">
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾4</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a class="btn-a1" href="javascript:;">缺菜</a>
+                <a class="btn-a2" href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+         </ul>
+         <!-- <div class="more-container">
+          <a href="javascript:;">滑动加载更多&gt;&gt;</a>
+        </div> -->
+      </div>
+
+    </section>
+    <!--缺菜-->
+    <section class="section2" style="display: none;">
+      <!--main-->
+      <div class="shop-menu">
+        <!--大型花卉菜单-->
+        <div class="big-wrap" style="display: block;">
+         <ul class="img-list">
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                 <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾5</span>
+                    <span class="add-item-icon"></span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a href="javascript:;">上架出售</a>
+                <a href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                    <span class="add-item-icon"></span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a href="javascript:;">上架出售</a>
+                <a href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                    <span class="add-item-icon"></span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a href="javascript:;">上架出售</a>
+                <a href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                    <span class="add-item-icon"></span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a href="javascript:;">上架出售</a>
+                <a href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                    <span class="add-item-icon"></span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a href="javascript:;">上架出售</a>
+                <a href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+           <li>
+             <a class="img-list-a" href="javascript:;">
+               <div class="img-wrap">
+                  <img src="../images/u474.png">
+               </div>
+               <div class="content-wrap">
+                  <h4>
+                    <span>小龙虾</span>
+                    <span class="add-item-icon"></span>
+                  </h4>
+                  <div class="unit-wrap">
+                     <span><span class="prices">100</span>元/份</span>
+                  </div>
+               </div>
+             </a>
+             <div class="list-btn">
+                <a href="javascript:;">上架出售</a>
+                <a href="javascript:;">推荐</a>
+                <a href="addDeshes.html">修改</a>
+             </div>
+           </li>
+         </ul>
+      </div>    
+    </section>
+    <!-- <div class="bg-wrap"></div> -->
+    <script type="text/javascript">
+       $(document).ready(function(){
+       	  //缺菜切换
+       	  $('nav ol li').on('click',function(){
+       	  	 $('nav ol li').removeClass('active');
+       	  	 $(this).addClass('active');
+       	  	 $('section').hide().eq($(this).index()).show();
+       	  });
+          //菜品切换
+          $('.nav ol li').on('click',function(){
+                $('.section1 .big-wrap').hide().eq($(this).index()).show();
+                $('.nav ol li').children('a').removeClass('active').eq($(this).index()).addClass('active');
+            });
+          //缺菜高亮
+          $(document).on('click','.btn-a1',function(){
+          	 $(this).css('backgroundColor','#ffae0d').html('已缺菜');
+          });
+          //推荐高亮
+          $(document).on('click','.btn-a2',function(){
+          	 $(this).css('backgroundColor','#ffae0d').html('已推荐');
+          });
+          //删除
+          $(document).on('click','.add-item-icon',function(){
+              $(this).parent().parent().parent().parent().remove();
+          });
+          //nav 高度
+          var navH=(document.documentElement.clientHeight-($('header').outerHeight()+$('nav').outerHeight()));
+          $('.nav').height(parseInt(navH));
+          $('.big-wrap').height(parseInt(navH));
+          
+       });
+    </script>
+</body>
+</html>

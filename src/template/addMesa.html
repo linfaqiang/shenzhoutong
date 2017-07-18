@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" style="font-size:50px;">
+<head>
+  <meta charset="UTF-8">
+  <title>台面新增</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <link rel="stylesheet" type="text/css" href="../css/libs/wappublic.css">
+  <link rel="stylesheet" type="text/css" href="../css/addMesa.css">
+  <script type="text/javascript" src="../libs/fontSize.js"></script>
+  <script type="text/javascript" src="../libs/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+       <h1>台面新增</h1>
+       <b onclick="javascript:history.go(-1);"></b>
+    </header>
+    <!--section-->
+    <section>
+       <div class="input-container">
+           <label for="#">台面名称：</label>
+           <input type="text" placeholder="请输入...">
+       </div>
+       <div class="type-container">
+           <p>可座人数：</p>
+           <div class="radio-button">
+              <span class="add-item-status radio-btn"> 
+                <input type="radio" name="" id='radio' /> 
+                <label class="" for='radio'></label> 
+              </span>
+              <span style="margin-right: .1rem;">餐厅</span>
+              <span class="add-item-status radio-btn"> 
+                <input type="radio" name="" id='radio2' /> 
+                <label class="" for='radio2'></label> 
+              </span>
+              <span>办公室</span>
+           </div>
+       </div>
+       <div class="num-container">
+           <p>可座人数：</p>
+           <div class="num-btn">
+              <button class="reduce-btns"></button>
+              <input type="text" value="8" readonly="true">
+              <button class="add-btns">+</button>
+           </div>
+       </div>
+       <div class="btn-container">
+          <a href="adminMesa.html">保存</a>
+          <a href="javascript:;">取消</a>
+       </div>
+    </section>
+    <script type="text/javascript">
+      $(document).ready(function(){
+         //加数量      
+          $(document).on('touchend','.add-btns',function(){         
+                var next=parseInt($(this).siblings('input').val());
+                $(this).siblings('input').val(next+1);         
+           });
+            //减数量
+          $(document).on('touchend','.reduce-btns',function(){           
+            var prev=parseInt($(this).siblings('input').val());
+              if(prev<=2){
+                 prev=2;
+                 $(this).siblings('input').val(prev);
+              }else{
+                 $(this).siblings('input').val(prev-1);
+              }  
+                
+           });
+
+          //选择类型
+          $('.radio-button label').on('click',function(){
+              $('.radio-button label').removeClass('active');
+              $(this).addClass('active');
+          });
+      });
+    </script>
+</body>
+</html>

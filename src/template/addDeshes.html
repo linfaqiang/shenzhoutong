@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en" style="font-size:50px;">
+<head>
+  <meta charset="UTF-8">
+  <title>菜品修改和新增</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <link rel="stylesheet" type="text/css" href="../css/libs/wappublic.css">
+  <link rel="stylesheet" type="text/css" href="../css/addDeshes.css">
+  <script type="text/javascript" src="../libs/fontSize.js"></script>
+  <script type="text/javascript" src="../libs/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+       <h1>菜品修改和新增</h1>
+       <b onclick="javascript:history.go(-1);"></b>
+    </header>
+    <!--section-->
+    <section>
+       <div class="input-container">
+           <label for="#">菜名：</label>
+           <input class="foondPut" type="text" value="水煮鱼">
+       </div>
+       <div class="list-container">
+           <p>分类：</p>
+           <ul>
+             <li class="active">主菜</li>
+             <li>凉菜</li>
+             <li>汤品</li>
+             <li>酒水</li>
+             <li>小吃</li>
+             <li>其它</li>
+           </ul>
+       </div>
+       <div class="input-container price--container">
+           <label for="#">价格：</label>
+           <input class="pricePut" type="text" value="">
+           <span>元</span>
+       </div>
+       <div class="company-container">
+           <p>单位：</p>
+           <ul>
+             <li class="active">份</li>
+             <li>例</li>
+             <li>瓶</li>
+             <li>个</li>
+           </ul>
+       </div>
+       <div class="img-container">
+           <p>主图：</p>
+           <div class="file-wrap">
+              <img>
+              <div class="text-box">
+                 <p>说明：只能上传一张菜品图片</p>
+                 <div class="file-btn">
+                    <label for="#">上传主图</label>
+                    <input id="myFile" type="file">
+                 </div>
+              </div>
+           </div>
+       </div>
+       <div class="textarea-container">
+           <label for="#">介绍：</label>
+           <textarea placeholder="请输入..."></textarea>
+       </div>
+       <div class="btn-container">
+          <button>保存</button>
+          <a href="javascript">取消</a>
+       </div>
+    </section>
+    <div class="flag-container"></div>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.list-container ul li').on('click',function(event){
+           $('.list-container ul li').removeClass('active');
+           $(this).addClass('active');
+        });
+        $('.company-container ul li').on('click',function(event){
+           $('.company-container ul li').removeClass('active');
+           $(this).addClass('active');
+        });
+        $('.btn-container button').on('click',function(){
+           var foodName = $('.input-container').children('input').val();
+               foodPrice=$('.price--container input').val();
+               foodDec  = $('.textarea-container textarea').val();
+           if(foodName==''){
+              flag('.flag-container','菜名不能为空！','1rem',2000,500);
+              $('.input-container').children('input').focus();
+              return false;
+            }else if(foodPrice==''){
+              flag('.flag-container','价格不能为空！','1rem',2000,500);
+              $('.price--container input').focus();
+              return false;
+            }else if(foodDec==''){
+              flag('.flag-container','介绍不能为空！','1rem',2000,500);
+              $('.textarea-container textarea').focus();
+              return false;
+            }else{
+              alert('成功');
+            }
+              
+        });
+
+        function flag(node,text,h,time,speed){
+             $(node).html(text).stop().animate({height: h,lineHeight: h,opacity: 1},speed);setTimeout(function(){$(node).html('').stop().animate({height: 0,lineHeight: 0,opacity: 0},speed);},time);
+            }
+      });
+    </script>
+    <script type="text/javascript" src="fileChange.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        //图片压缩上传预览
+        var ImgUpload=new UploadImg("#myFile", "img");
+
+        //显示图片元素的高度
+        //var BH=$('.file-wrap img').height(); 
+
+      });
+  </script>
+</body>
+</html>

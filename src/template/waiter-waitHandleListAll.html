@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>神州通-待处理订单列表</title>
+	    <meta name="description" content="">
+		<meta name="Keywords" content="">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.picker.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.poppicker.css"/>
+		<link rel="stylesheet" href="../css/global/rest.css">
+		<link rel="stylesheet" type="text/css" href="../css/waitHandleList.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.min.css"/>
+		<style type="text/css">
+			.mui-pull-bottom-pocket{
+				visibility: visible;
+				overflow: auto;	
+			}
+
+			li{list-style: none;}
+			.head{position: relative;}
+			.handlList .head .icon-index{
+			   display: block;
+               position: absolute;
+               right: 0;
+               top: 0 ;
+               width: 1rem;
+               height: .8rem;
+               background:url(../images/chart.png) center no-repeat; 
+               background-size: .48rem .6rem;
+               transform: rotate(0deg);
+               -webkit-transform: rotate(0deg);
+			}
+			footer{
+				position: fixed;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: .92rem;
+				line-height: .92rem;
+				background-color: #fff;
+				box-shadow: 0 -.05rem .05rem rgba(0,0,0,.2);
+				z-index: 999;
+			}
+			footer ol{
+				display: flex;
+				-webkit-display: flex;
+			}
+			footer ol li{
+               width: 50%;
+			}
+			footer ol li.active{
+               background-color: #2595d1;
+			}
+			footer ol li a{
+				display: block;
+				color: #333;
+               text-align: center;
+			}
+			footer ol li.active a{color: #fff;}
+		</style>
+		<script type="text/javascript" charset="UTF-8">
+			var win = window,doc = document;
+			function setFontSize() {
+			　　var winWidth = window.innerWidth;
+			　　doc.documentElement.style.fontSize = (((winWidth>640?640:winWidth) / 640) * 100) + 'px';
+			};
+			setFontSize();
+			win.onresize=setFontSize;
+   		</script>
+	</head>
+	<body>
+		<div class="handlList">
+			<div class="head ">
+		     	<a href="javascript:history.go(-1);;"></a>
+		     	<span>待处理订单列表</span>
+		     	<a class="icon-index" href="../../serverIndex.html"></a>
+			</div>
+			
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper mgsList">
+				<div class="mui-scroll">
+					<!--数据列表-->
+					<ul class="mui-table-view mui-table-view-chevron">
+						
+					</ul>
+				</div>
+			</div>
+			
+<!--			
+			<div class="">
+				<ul>-->
+					
+					
+					
+					<!--<li>
+						<div class="info">
+							<p>订餐人：林某</p>
+							<p>待确认</p>
+							<p>人数：8人</p>
+						</div>	
+						<div class="dateStart">
+							下单时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="dateStart">
+							用餐时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="address">
+							用餐地点：<span>岳阳楼、洞庭湖</span>
+						</div>
+						<div class="markes clear-fix">
+							<p>备注：<span>请尽快处理</span></p><span class="fr">金额：400.00</span>
+						</div>
+						<div class="stausBtn">
+							<a href="javascript:;">取消订单</a>
+							<a href="javascript:;">预定确认</a>
+						</div>
+					</li>
+						<li>
+						<div class="info">
+							<p>订餐人：林某</p>
+							<p>待确认</p>
+							<p>人数：8人</p>
+						</div>	
+						<div class="dateStart">
+							下单时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="dateStart">
+							用餐时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="address">
+							用餐地点：<span>岳阳楼、洞庭湖</span>
+						</div>
+						<div class="markes clear-fix">
+							<p>备注：<span>请尽快处理</span></p><span class="fr">金额：400.00</span>
+						</div>
+						<div class="stausBtn">
+							<a href="javascript:;">取消订单</a>
+							<a href="javascript:;">预定确认</a>
+						</div>
+					</li>
+						<li>
+						<div class="info">
+							<p>订餐人：林某</p>
+							<p>待确认</p>
+							<p>人数：8人</p>
+						</div>	
+						<div class="dateStart">
+							下单时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="dateStart">
+							用餐时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="address">
+							用餐地点：<span>岳阳楼、洞庭湖</span>
+						</div>
+						<div class="markes clear-fix">
+							<p>备注：<span>请尽快处理</span></p><span class="fr">金额：400.00</span>
+						</div>
+						<div class="stausBtn">
+							<a href="javascript:;">拒绝</a>
+							<a href="javascript:;">同意</a>
+						</div>
+					</li>
+						<li>
+						<div class="info">
+							<p>订餐人：林某</p>
+							<p>待确认</p>
+							<p>人数：8人</p>
+						</div>	
+						<div class="dateStart">
+							下单时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="dateStart">
+							用餐时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="address">
+							用餐地点：<span>岳阳楼、洞庭湖</span>
+				    		</div>
+						<div class="markes clear-fix">
+							<p>备注：<span>请尽快处理</span></p><span class="fr">金额：400.00</span>
+						</div>
+						<div class="stausBtn">
+							<a href="javascript:;">取消订餐</a>
+							<a href="javascript:;">结算</a>
+						</div>
+					</li>
+						<li>
+						<div class="info">
+							<p>订餐人：林某</p>
+							<p>待确认</p>
+							<p>人数：8人</p>
+						</div>	
+						<div class="dateStart">
+							下单时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="dateStart">
+							用餐时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="address">
+							用餐地点：<span>岳阳楼、洞庭湖</span>
+						</div>
+						<div class="markes clear-fix">
+							<p>备注：<span>请尽快处理</span></p><span class="fr">金额：400.00</span>
+						</div>
+						<div class="stausBtn">
+							<a href="javascript:;">异常处理</a>
+						</div>
+					</li>-->
+				<!--</ul>
+				
+				
+				
+			</div>-->
+			
+		</div>
+		<footer>
+           <ol>
+           	<li class="active"><a href="javascript:;">未完成订单</a></li>
+           	<li><a href="javascript:;">已完成订单</a></li>
+           </ol>
+		</footer>
+		
+		<script src="../libs/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			mui.init({
+				pullRefresh: {
+					container: '#pullrefresh',
+//					down: {
+//						callback: pulldownRefresh
+//					},
+					up: {
+						contentrefresh: '正在加载...',
+						callback: pullupRefresh
+					}
+				}
+			});
+			/**
+			 * 下拉刷新具体业务实现
+			 */
+//			function pulldownRefresh() {
+//				setTimeout(function() {
+//					var table = document.body.querySelector('.mui-table-view');
+//					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+//					for (var i = cells.length, len = i + 3; i < len; i++) {
+//						var li = document.createElement('li');
+//						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+//						//下拉刷新，新纪录插到最前面；
+//						table.insertBefore(li, table.firstChild);
+//					}
+//					mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+//				}, 1500);
+//			}
+			var count = 0;
+			/**
+			 * 上拉加载具体业务实现
+			 */
+			function pullupRefresh() {
+				setTimeout(function() {
+					mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 10)); //参数为true代表没有更多数据了。
+					var table = document.body.querySelector('.mui-table-view');
+					var cells = document.body.querySelectorAll('.mui-table-view-cell');
+					for (var i = cells.length, len = i + 20; i < len; i++) {
+						var li = document.createElement('li');
+						li.className = 'mui-table-view-cell';
+//						li.innerHTML = '<a class="mui-navigate-right">Item ' + (i + 1) + '</a>';
+
+						li.innerHTML = `<div class="info">
+							<p>订餐人：林某</p>
+							<p>待确认</p>
+							<p>人数：8人</p>
+						</div>	
+						<div class="dateStart">
+							下单时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="dateStart">
+							用餐时间：<span>2017-01-15  12:12:00</span>
+						</div>
+						<div class="address">
+							用餐地点：<span>岳阳楼、洞庭湖</span>
+						</div>
+						<div class="markes clear-fix">
+							<p>备注：<span>请尽快处理</span></p><span class="fr">金额：400.00</span>
+						</div>
+						<div class="stausBtn">
+							<a href="javascript:;">拒绝</a>
+							<a class="agree" href="waiter-orderInfo.html">同意</a>
+						</div>`;
+
+
+
+						table.appendChild(li);
+					}
+				}, 1500);
+			}
+			if (mui.os.plus) {
+				mui.plusReady(function() {
+					setTimeout(function() {
+						mui('#pullrefresh').pullRefresh().pullupLoading();
+					}, 1000);
+
+				});
+			} else {
+				mui.ready(function() {
+					mui('#pullrefresh').pullRefresh().pullupLoading();
+                    $(document).on('tap','.agree',function(){
+                        window.location.href="waiter-orderInfo.html";
+					});
+				});
+			}
+
+		</script>
+		<script type="text/javascript">
+            $(document).ready(function(){
+            	$('footer ol li').on('click',function(){
+            		$('footer ol li').removeClass('active');
+            		$(this).addClass('active');
+            	});
+            });
+		</script>
+		
+	</body>
+</html>	

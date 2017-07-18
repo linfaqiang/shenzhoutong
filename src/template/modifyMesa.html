@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" style="font-size:50px;">
+<head>
+  <meta charset="UTF-8">
+  <title>台面修改</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <link rel="stylesheet" type="text/css" href="../css/libs/wappublic.css">
+  <link rel="stylesheet" type="text/css" href="../css/modifyMesa.css">
+  <script type="text/javascript" src="../libs/fontSize.js"></script>
+  <script type="text/javascript" src="../libs/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+       <h1>台面修改</h1>
+       <b onclick="javascript:history.go(-1);"></b>
+    </header>
+    <!--section-->
+    <section>
+       <div class="input-container">
+           <label for="#">台面名称：</label>
+           <input type="text" value="庐山厅">
+       </div>
+       <div class="num-container">
+           <p>可座人数：</p>
+           <div class="num-btn">
+              <button class="reduce-btns"></button>
+              <input type="text" value="8" readonly="true">
+              <button class="add-btns">+</button>
+           </div>
+       </div>
+       <div class="btn-container">
+          <a href="adminMesa.html">保存</a>
+          <a href="javascript:;">取消</a>
+          <a href="javascript:;">删除</a>
+       </div>
+    </section>
+    <script type="text/javascript">
+      $(document).ready(function(){
+         //加数量      
+          $(document).on('touchend','.add-btns',function(){         
+                var next=parseInt($(this).siblings('input').val());
+                $(this).siblings('input').val(next+1);         
+           });
+            //减数量
+          $(document).on('touchend','.reduce-btns',function(){           
+            var prev=parseInt($(this).siblings('input').val());
+              if(prev<=2){
+                 prev=2;
+                 $(this).siblings('input').val(prev);
+              }else{
+                 $(this).siblings('input').val(prev-1);
+              }  
+                
+           });
+      });
+    </script>
+</body>
+</html>

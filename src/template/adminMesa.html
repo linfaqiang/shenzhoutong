@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en" style="font-size:50px;">
+<head>
+  <meta charset="UTF-8">
+  <title>台面修改</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta content="yes" name="apple-mobile-web-app-capable" />
+  <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+  <meta content="telephone=no" name="format-detection" />
+  <link rel="stylesheet" type="text/css" href="../css/libs/wappublic.css">
+  <link rel="stylesheet" type="text/css" href="../css/adminMesa.css">
+  <script type="text/javascript" src="../libs/fontSize.js"></script>
+  <script type="text/javascript" src="../libs/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header>
+       <h1>台面修改</h1>
+       <b onclick="javascript:history.go(-1);"></b>
+    </header>
+    <!--section-->
+    <section>
+       <div class="add-btn">
+          <a href="addMesa.html">新增台面</a>
+       </div>
+       <div class="area-container">
+          <h4>餐厅台面</h4>
+          <ul>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>庐山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>岳阳楼</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>黄山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>崇山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>庐山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>庐山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>庐山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>庐山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>庐山厅</span>
+                 <span>（8人座）</span>
+              </a>
+            </li>
+          </ul>
+       </div>
+       <div class="area-container area-office">
+          <h4>办公室</h4>
+          <ul>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>九楼办公室</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>八楼办公室</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>七楼办公室</span>
+              </a>
+            </li>
+            <li>
+              <a href="modifyMesa.html">
+                 <span>其他</span>
+              </a>
+            </li>
+          </ul>
+       </div>
+    </section>
+
+    <script type="text/javascript">
+       $(document).ready(function(){
+           $('.area-container ul li').on('click',function(event){
+              $(this).addClass('active');
+           });
+          /*var current= 0;
+          $('.area-container ul li').on('click',function(event){
+             if(current==0){
+               $(this).addClass('active');
+               current++;
+              }else{
+                if($(this).hasClass('active')){
+                   $(this).removeClass('active');
+                   current--;
+                }else{
+                   $(this).addClass('active');
+                   current++;
+                }
+              }
+          });
+       });*/
+    </script>
+</body>
+</html>

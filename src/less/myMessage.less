@@ -1,0 +1,60 @@
+@import 'common';
+
+.myMessage{
+    
+    .head{
+        .head();
+    }
+    
+    .messageList{
+        font-size: .26rem;
+        li{
+            a{
+                display: block;
+            }
+            padding:.1rem;
+            border-bottom: 6px solid #eaeaea; 
+            position: relative;
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+        .icon{
+            width:.9rem;
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            img{
+                width:100%;
+            }
+        }
+        .txt{
+            padding-left: 1rem;
+            padding-top: .1rem;
+            .red{
+                float: right;
+                color:#f7797a;
+            }
+            .fr{
+                float: right;
+            }
+            *{
+              padding:.05rem 0;
+            }
+           
+        }
+        .pr{
+            position: relative;
+        }
+         .msgDate{
+                text-indent: 1em;
+                color:#666;
+                padding:.1rem 0;
+                font-size: .24rem;
+                border-bottom: 1px solid #eaeaea; 
+            }
+        
+        
+    }
+}

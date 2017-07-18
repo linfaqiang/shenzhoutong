@@ -1,0 +1,202 @@
+body{height: 100%;}
+body{
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto;
+  overflow-scrolling:touch;
+  -webkit-overflow-scrolling:touch;
+  position: relative;            
+  font-family: "Microsoft Yahei",Arial,Helvetica,sans-serif;
+  font-size: .26rem; 
+  color: #333333;
+  background-color: #fff;
+  }
+ img{
+  display: block;
+  max-width: 100%;
+  }
+a{
+  display: block;
+  color: #333;
+}
+em{font-style: normal}
+/*header*/
+header{
+  height: .92rem;
+  line-height: .92rem;
+  padding: 0 .2rem; 
+  /*border-bottom: 1px solid #21699c;*/
+  background-color: #199ed8; 
+}
+header h1{
+  color: #fff;
+  font-size: .36rem;
+  text-align: center;
+}
+header b{
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: .6rem;
+  height: .92rem;
+  background: url(../images/right.png) center no-repeat;
+  background-size: .24rem .45rem;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+
+/*section*/
+section{
+  padding:0 .2rem;
+}
+.input-container{
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  -wenkit-box-pack: center;
+  justify-content: space-between;
+  -webkit-box-align: justify;
+  -webkit-justify-content: space-between;
+  padding: .2rem 0;
+}
+.input-container label{
+  display: inline-block;
+  vertical-align: middle;
+  height: .6rem;
+  line-height: .6rem;
+}
+.input-container input{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: .1rem .1rem;
+  width: 80%;
+  border-radius: .06rem;
+  border: 1px solid rgba(0,0,0,.2);
+}
+
+.num-container,.type-container{
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  -wenkit-box-pack: center;
+  justify-content: space-between;
+  -webkit-box-align: justify;
+  -webkit-justify-content: space-between;
+  padding: .2rem 0;
+}
+.num-container .num-btn,.type-container .radio-button{
+  width: 80%;
+}
+.num-container .num-btn button,.num-container .num-btn input{
+  display: inline-block;
+  vertical-align: middle;
+}
+.num-container .num-btn button{
+  width: .48rem;
+  height: .48rem;
+  line-height: .49rem;
+  border: none;
+  border-radius: 0.48rem;
+  border-radius: 50%;
+  background-color: #84a7d4;
+  color: #fff;
+  font-size: .36rem;
+}
+.num-container .num-btn button:nth-child(1){
+  position: relative;
+  border-right: 1px solid #ddd;
+}
+.num-container .num-btn button:nth-child(1):after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: .15rem;
+  height: .04rem;
+  background-color: #fff;
+}
+.num-container .num-btn button:nth-child(3){
+  border-left: 1px solid #ddd;
+}
+.num-container .num-btn input[type="text"]{
+  border: none;
+  width: .3rem;
+  height: .48rem;
+  padding: 0 .1rem;
+  color: #666;
+  font-size: .22rem;
+  text-align: center;
+}
+.btn-container{
+  width: 100%;
+  padding-top: .2rem;
+}
+.btn-container>a{
+  width: 100%;
+  height: .6rem;
+  line-height: .61rem;
+  margin-bottom: .3rem;
+  text-align: center;
+  color: #fff;
+  border-radius: .1rem;
+  background-color: #139dff;
+}
+.radio-button span{
+  vertical-align: middle;
+}
+/*radio*/
+.radio-btn { 
+  position: relative; 
+  display: inline-block; 
+  width: .26rem; 
+  height: .26rem;
+  cursor: pointer; 
+} 
+.radio-btn input[type='radio'] { 
+  position: absolute; 
+  width: .26rem; 
+  height: .26rem; 
+  opacity: 0; 
+  z-index: 0; 
+  outline: none; 
+} 
+.radio-btn > label{ 
+  position: absolute; 
+  display: inline-block; 
+  width: .24rem; 
+  height: .24rem;
+  border-radius: 50%; 
+  text-align: center;
+  border: 1px solid #aaa; 
+  transition: all 0.3s ease; 
+  -webkit-transition: all 0.3s ease; 
+  -moz-transition: all 0.3s ease; 
+}
+.radio-btn > label:before { 
+  content: ''; 
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  display: block;
+  width: .15rem; 
+  height: .15rem; 
+  border-radius: 50%; 
+  background-color: #fff; 
+}
+.radio-btn label.active {
+  border-color: #007aff;
+}
+.radio-btn label.active::before { 
+  background-color: #007aff;
+}

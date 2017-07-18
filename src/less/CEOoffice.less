@@ -1,0 +1,167 @@
+@import "common";
+
+.CEOoffice{
+    .head{
+        .head();
+    }
+    
+    .top{
+        padding:.2rem .1rem .1rem .1rem;
+        
+    }
+    .top:after{
+        content: '';
+        height: 1px;
+        width:100%;
+        display: block;
+        background-color: #eaeaea;
+    }
+    .date{
+        margin-bottom: .15rem;
+        position: relative;
+        padding-bottom: .05rem;
+        button{
+            position: absolute;
+            background-color: @headColor;
+            border:none;
+            border-radius: 3px;
+            height: .62rem;
+            top:50%;
+            color:#fff;
+            width:20%;
+            right:0;
+            margin-top: -.31rem;
+        }
+    }
+    .dateText{
+        float: left;
+        height: .62rem;
+        line-height: .62rem;
+        width: 1.25rem;
+    }
+    
+    .dataNumber{
+//      float: left;
+//      padding-left: 1.25rem;
+        
+            display: box;
+            display: -ms-flexbox;
+            display: flex;
+            display: -webkit-flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-justify-content: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-align-items: center;
+
+        
+        
+        input{
+             -webkit-appearance: none;
+             -moz-appearance: textfield;
+             display: inline-block;
+             width:49.5%;
+             margin-bottom: 0;
+        }
+        span{
+            display: inline-block;
+            width: 1%;
+            text-align: center;
+        }
+    }
+    
+    .w5{
+        input{
+            margin-bottom: 0;
+        }
+        width: 42%;float: left;
+        span{
+            width:1.2rem;
+            text-align: right;
+            float: left;
+        }
+        .name{
+            width:100%;
+            padding-left: 1.25rem;
+        }
+        
+    }
+    .w1{
+            width:37%;
+           span{
+                width: .8rem;
+           }
+           .name{
+               padding-left: .85rem;
+           }
+        }
+    
+    .listBox{
+        li{
+            position: relative;
+            font-size: .26rem;
+            border-bottom: 1px solid #eaeaea;
+            padding:.2rem 0;
+            &:first-child{
+                padding-top:0;
+            }
+        }
+        padding:.1rem;
+        div{
+                color:#444;
+            margin-bottom: .1rem;
+            p{
+                width:50%;
+                color:#444;
+                label{
+                    display: inline-block;
+                    width:1.4rem;
+                    text-align: right;
+                }
+                
+                float: left;
+                span{}
+            }
+            
+        }
+        .time{
+            
+                color:#444;
+                label{
+                      display: inline-block;
+                    width:1.4rem;
+                    text-align: right;
+                }
+                div:last-child{
+                    margin-bottom: 0;
+                }
+                margin-bottom:0;
+        }
+        button{
+            width:1.3rem;
+            border-radius: .3rem;
+            background-color: @headColor;
+            border:none;
+            color:#fff;
+            height:.6rem;
+            right: 0;
+            bottom: .1rem;
+            
+            position: absolute;
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    
+    .mui-btn-blue, .mui-btn-primary, input[type=submit]{
+        color: #333;
+    }
+    
+    
+}

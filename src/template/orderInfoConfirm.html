@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>神州通</title>
+	    <meta name="description" content="">
+		<meta name="Keywords" content="">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" href="../css/global/rest.css">
+		<link rel="stylesheet" type="text/css" href="../css/orderInfoConfirm.css"/>
+		
+		<script type="text/javascript" charset="UTF-8">
+			var win = window,doc = document;
+			function setFontSize() {
+			　　var winWidth = window.innerWidth;
+				winWidth = winWidth<320 ? 320 : winWidth;
+			　　doc.documentElement.style.fontSize = (((winWidth>640?640:winWidth) / 640) * 100) + 'px';
+			};
+			setFontSize();
+			win.onresize=setFontSize;
+   		</script>
+	</head>
+	<body>
+		
+		<div class="orderInfoConfirm">
+			<div class="head fexid">
+		     	<a href="javascript:history.go(-1);;"></a>
+		     	<span>订餐信息确认</span>
+			</div>
+		
+			<div class="content">
+				
+				<ul>
+					<li>
+						<div >
+							订餐编号：
+						</div>
+						<div >
+							2017001 <span class="fr">创建人：  <u>陈言</u></span>
+						</div>
+					</li>
+					<li>
+						<div >
+							订餐时间：
+						</div>
+						<div >
+							2017-01-18  12:10:00
+						</div>
+						
+					</li>
+					<li>
+						<div >
+							用餐时间：
+						</div>
+						<div >
+							2017-01-20  12:00:00
+						</div>
+						
+					</li>
+					<!-- <li>
+						<div >
+							用餐地点：
+						</div>
+						<div >
+							聚宝楼 <span class="fr">用餐人数：  <u>8人</u></span>
+						</div>
+					</li> -->
+				    <li>
+						<div >
+							任务编号：
+						</div>
+						<div >
+							RW001  <span class="fr">任务名称：  <u>就餐费用</u></span>
+						</div>
+						
+					</li>
+					<li class="border_B">
+						<div >
+							预算金额：
+						</div>
+						<div >
+							500元
+						</div>
+						
+					</li>
+					<!-- <li>
+						<div >
+							服务员：
+						</div>
+						<div >
+							店小二 <span class="fr">确认时间：<u>2017-02-24 15:30</u></span>
+						</div>
+					</li>
+					<li>
+						<div >
+							联系电话：
+						</div>
+						<div >
+							134131425131425
+						</div>
+					</li>
+					<li class="border_B">
+						<div >
+							留言：
+						</div>
+						<div >
+							134131425131425
+						</div>
+					</li> -->
+					<li>
+					
+						<div >
+							点餐列表：
+						</div>
+						<div class="menuL">
+							
+							<dl>
+							    <dt>
+									<span>菜品名</span>
+									<span>数量</span>
+									<p>单价</p>
+									<div class="flavor">口味</div>
+								</dt>
+								<dt>
+									<span>1、红烧牛肉</span>
+									<span><i class="red num">1</i>份</span>
+									<p class="price">30元</p>
+									<div><i class="red">微辣、清淡</i></div>
+								</dt>
+								<dt>
+									<span>2、红烧牛肉</span>
+									<span><i class="red num">1</i>份</span>
+									<p class="price">30元</p>
+									<div><i class="red">微辣、清淡</i></div>
+								</dt>
+								<dt>
+									<span>3、红烧牛肉</span>
+									<span><i class="red num">1</i>份</span>
+									<p class="price">30元</p>
+									<div><i class="red">微辣、清淡</i></div>
+								</dt>
+								<dt>
+									<span>4、红烧牛肉</span>
+									<span><i class="red num">1</i>份</span>
+									<p class="price">30元</p>
+									<div><i class="red">微辣、清淡</i></div>
+								</dt>
+								<dd><p>数量：<span class="total">8</span></p><p>小计：<b class="count">222元</b></p></dd>
+							</dl>
+							
+						</div>
+					
+					
+					
+						
+					</li>
+					<li>
+						<div >
+							备注：
+						</div>
+						<div class="menuL message">
+							陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言
+							陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言陈言
+						</div>
+						
+					</li>
+				</ul>
+				
+				<div class="btn">
+					<a class="blank" href="javascript:history.go(-1);">返回</a>
+					<a href="myOrder.html">确认</a>
+					
+				</div>
+				
+				
+			</div>
+		
+		</div>
+		
+		    
+		
+		
+		
+		<script src="../libs/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/amount.js"></script>
+		<script type="text/javascript">
+           $(document).ready(function(){
+           	  var total=$('.menuL dl dt').size();
+           	  $('.total').html(total-1);
+              
+             //实例对象
+           	 var amount=new Amount('num','price','.count');
+           	     amount.showCount();
+           });
+		</script>
+		
+		
+	</body>
+</html>

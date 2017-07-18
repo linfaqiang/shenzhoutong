@@ -1,0 +1,106 @@
+@import 'common';
+
+.addFood{
+    .head{
+        .head();
+    }
+    
+    .main{
+        .pTitle{
+            padding: .15rem;
+            margin-top: .1rem;
+            font-size: .30rem;
+            background-color: #eaeaea;
+        }
+        .room{
+             display: box;
+            display: -ms-flexbox;
+            display: flex;
+            display: -webkit-flex;
+            -ms-flex-pack: center;
+            justify-content: flex-start;
+            -webkit-justify-content: flex-start;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-align-items: center;
+            flex-wrap: wrap ;   
+            
+            li{
+                
+                width: 30%;
+                text-align: center;
+                padding: .25rem ;
+                background-color: #EAEAEA;
+                margin-left: 3%;
+                margin-top: .1rem;
+                font-size: .24rem;
+                position: relative;
+                cursor: pointer;
+                border:2px solid transparent;
+                &.active{
+                    background-color: rgba(0, 204, 255, 1);
+                }
+                &.activeBorder{
+                    border:2px solid #F7797A;
+                    color: #f00;
+                }
+                &:nth-child(3n+1){
+                margin-left: 2%;
+            }
+            }
+        }
+        .tableList{
+            padding:.1rem;
+            .msgDate{
+                text-indent: 1em;
+                color: #666;
+                padding: .1rem 0;
+                font-size: .24rem;
+                background-color: #fff;
+                border-bottom: 1px solid #eaeaea;
+            }
+            li{
+                background-color: #eaeaea;
+                padding:.1rem;
+                position: relative;
+                margin-bottom: .1rem;
+                .left{
+                    width:75%;
+                   
+                }
+                .btnR{
+                    position: absolute;
+                    background-color: @headColor;
+                    color:#fff;
+                    padding:.2rem .15rem;
+//                  border-radius: 3px;
+                    top:50%;
+                    transform: translateY(-50%);
+                    -webkit-transform: translateY(-50%);
+                    
+                    right: .1rem;
+                }
+                .clear-fix {
+                    padding-bottom: .1rem;
+                }
+                .r{
+                    margin-left: .5rem;
+                }
+                .clear-fix span{
+                    color:#000;
+                    font-size: .28rem;
+                }
+                p{
+                    padding:.05rem 0;
+                    color:#666;
+                    font-size: .27rem;
+                }
+            }
+            
+            
+        }
+    }
+    
+    
+    
+}

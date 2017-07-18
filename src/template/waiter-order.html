@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>神州通-订餐</title>
+	    <meta name="description" content="">
+		<meta name="Keywords" content="">
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	    <meta content="yes" name="apple-mobile-web-app-capable">
+	    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+	    <meta content="telephone=no" name="format-detection">
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.picker.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/libs/mui.poppicker.css"/>
+		<link rel="stylesheet" href="../css/global/rest.css">
+		<link rel="stylesheet" type="text/css" href="../css/orderingInfo.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/roomFood.css"/>
+		
+		<script type="text/javascript" charset="UTF-8">
+			var win = window,doc = document;
+			function setFontSize() {
+			　　var winWidth = window.innerWidth;
+			　　doc.documentElement.style.fontSize = (((winWidth>640?640:winWidth) / 640) * 100) + 'px';
+			};
+			setFontSize();
+			win.onresize=setFontSize;
+   		</script>
+   		
+	</head>
+	<body class="oder-Info waiterOrder">
+		<div class="mask">
+			<p class="mH">订餐人选择的地点：<span class="red">办公室</span></p>
+			<div class="addrTit">
+				餐厅地点（可多选）
+			</div>
+			<ul>
+				<li class="noon night">庐山厅</li>
+				<li >聚宝楼</li>
+				
+				<!--<li class="active" check='1'>聚宝楼</li>-->
+				<li>岳阳楼</li>
+				<li>庐山厅</li>
+				<li>聚宝楼</li>
+				<li>岳阳楼</li>
+				<li>庐山厅</li>
+				<li>聚宝楼</li>
+				<li>岳阳楼</li>
+			</ul>
+			<div class="addrTit">
+				办公地点（可多选）
+			</div>
+			<ul>
+				<li  class="noon night ">九楼办公室</li>
+				<!--<li  class="noon night active"  check='1'>九楼办公室</li>-->
+				<li>八楼办公室</li>
+				<li>七楼办公室</li>
+				<li>其它</li>
+			</ul>
+			
+			<div class="fixdBtn">
+				<a id="return" href="javascript:;">返回</a>
+				<a id="enter"  href="javascript:;">确认</a>
+			</div>
+			
+		</div>
+		
+		
+		
+		
+		
+		
+		
+		
+		<div class="head">
+		     <a href="javascript:history.go(-1);;"></a>
+		     <span>我的订餐</span>
+		</div>
+		
+		<div class="warp">
+			<ul class="list-box">
+				<li>
+					<span class="s must">
+						用餐人：
+					</span>
+					<div class="ipt">
+						<input class="parson" type="text" name="" id="userName" value="" placeholder="请选择订餐人" />
+					</div>
+				</li>
+
+				<li>
+					<span class="s must">
+						任务编号：
+					</span>
+					<div class="ipt">
+						<input class="parson read" type="text" name="" id="daskNumber" value="2017" readonly="true"/>
+					</div>
+				</li>
+
+				<li>
+					<span class="s must">
+						任务名称：
+					</span>
+					<div class="ipt">
+						<input class="parson read" type="text" name="" id="daskName" value="点菜" readonly="true"/>
+					</div>
+				</li>
+
+				<li>
+					<span class="s must">
+						申请金额：
+					</span>
+					<div class="ipt">
+						<input class="parson read" type="text" name="" id="daskCount" value="500" readonly="true"/>
+					</div>
+				</li>			
+	
+				
+				<li>
+					<span class="s must">
+						用餐时间：
+					</span>
+					<div class="ipt">
+						<input class="time" type="text" id="startTime" name="" id="" value="" placeholder="请选择用餐时间" />
+					</div>
+				</li>
+				
+				<li class="numA">
+					<span class="s must">
+						用餐人数：
+					</span>
+					<div class="ipt  trans">
+						<div class="count" >
+							<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+							  <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+							  <input id="userNum" style="margin-top: .05rem;"  class="mui-numbox-input" type="number" />
+							  <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+							</div>
+						</div>
+					</div>
+				</li>		
+				
+				<li>
+					<span class="s must">
+						用餐地点：
+					</span>
+					<div class="ipt address ">
+						<div class="clear-fix">
+							<input type="text" name="" id="address" value="" readonly="readonly" />
+							<a id="choiceAddr" href="javascript:;">
+								选择
+							</a>
+						</div>
+						
+					
+					</div>
+				</li>	
+				<li class="br">
+					<span class="s ">点餐列表：</span>
+					<span class="type-details">主菜1个，凉菜1个</span>
+					<div class="ipt line-wrap">
+						<hr />
+					</div>
+				</li>
+				
+				
+				<li class="menu">
+					<div class="left">
+						<div class="primary"><a href="deliciousFood.html"><img src="../images/u99.png"/></a></div>
+<!--						
+						<div class="one">近一次</div>
+						<div class="one">近两次</div>
+						-->
+					</div>
+					
+					
+					<div class="right">
+						
+						<ul>
+							<li>
+								<div class="trans">
+									<div class="count">
+										<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+										  <button class="mui-btn numbox-btn-minus" type="button">-</button>
+										  <input class="numberPut" type="number" value="0"/>
+										  <button class="mui-btn numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+									<div class="name">
+										<h2>1、红烧狮子头</h2>
+										<p>
+											<span class="price-area">18元	</span>
+											<span>微辣</span>
+											<span >清淡</span>
+										</p>
+									</div>
+								</div>
+								<div class="remove">
+									删除
+								</div>
+								
+							</li>
+							<li>
+								<div class="trans">
+									<div class="count">
+										<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+										  <button class="mui-btn numbox-btn-minus" type="button">-</button>
+										  <input class="numberPut" type="number" value="0"/>
+										  <button class="mui-btn numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+									<div class="name">
+										<h2>2、红烧狮子头</h2>
+										<p>
+											<span class="price-area">18元	</span>
+											<span>微辣</span>
+											<span >清淡</span>
+										</p>
+									</div>
+								</div>
+							<div class="remove">
+									删除
+								</div>
+								
+							</li>
+							<li>
+								
+								<div class="trans">
+									<div class="count">
+										<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+										  <button class="mui-btn numbox-btn-minus" type="button">-</button>
+										  <input class="numberPut" type="number" value="0"/>
+										  <button class="mui-btn numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+									<div class="name">
+										<h2>3、红烧狮子头</h2>
+										<p>
+											<span class="price-area">18元	</span>
+											<span>微辣</span>
+											<span >清淡</span>
+										</p>
+									</div>
+								</div>
+								<div class="remove">
+									删除
+								</div>
+								
+							</li>
+							<li>
+								
+								<div class="trans">
+									<div class="count">
+										<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+										  <button class="mui-btn numbox-btn-minus" type="button">-</button>
+										  <input class="numberPut" type="number" value="0"/>
+										  <button class="mui-btn numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+									<div class="name">
+										<h2>4、红烧狮子头</h2>
+										<p>
+											<span class="price-area">18元	</span>
+											<span>微辣</span>
+											<span >清淡</span>
+										</p>
+									</div>
+								</div>
+								<div class="remove">
+									删除
+								</div>
+							</li>
+							<li>
+								
+								<div class="trans">
+									<div class="count">
+										<div class="mui-numbox" data-numbox-step='1' data-numbox-min='0' data-numbox-max='100'>
+										  <button class="mui-btn numbox-btn-minus" type="button">-</button>
+										  <input class="numberPut" type="number" value="0"/>
+										  <button class="mui-btn numbox-btn-plus" type="button">+</button>
+										</div>
+									</div>
+									<div class="name">
+										<h2>5、红烧狮子头</h2>
+										<p>
+											<span class="price-area">18元	</span>
+											<span>微辣</span>
+											<span >清淡</span>
+										</p>
+									</div>
+								</div>
+								<div class="remove">
+									删除
+								</div>
+							</li>
+						</ul>
+						
+						
+					</div>
+					
+					
+					
+				</li>
+				
+				<li class="sumAll">
+					<span>数量：<i class="deshNum">22</i></span>
+					<span>合计：<i class="deshTotal">2345元</i></span>
+				</li>
+				
+				<hr />
+				
+				<li>
+					
+					<span class="s ">
+						备注：
+					</span>
+					<div class="ipt ">
+						<textarea></textarea>
+					</div>
+					
+				</li>
+			</ul>
+			
+			
+			<div class="btn-wrap">
+				<button>取消</button>
+				<button>确认下单</button>
+				<!-- <button>预定</button> -->
+			</div>
+			
+			
+		</div>
+		<!--任务编号-->
+		<div class="taskNum">
+           <ul>
+	         <li>
+	            <span class="add-item-status checkbox-btn"> 
+	              <input type="radio" name="" /> 
+	            </span>
+	            <span class="taskN">RW001</span>
+	            <span class="taskD">就餐费用</span>
+	            <span class="taskC">500元</span>
+	         </li>
+	         <li>
+	            <span class="add-item-status checkbox-btn"> 
+	              <input type="radio" name="" /> 
+	            </span>
+	            <span class="taskN">RW002</span>
+	            <span class="taskD">就餐费用</span>
+	            <span class="taskC">500元</span>
+	         </li>
+	         <li>
+	            <span class="add-item-status checkbox-btn"> 
+	              <input type="radio" name="" /> 
+	            </span>
+	            <span class="taskN">RW003</span>
+	            <span class="taskD">就餐费用</span>
+	            <span class="taskC">500元</span>
+	         </li>
+	         <li>
+	            <span class="add-item-status checkbox-btn"> 
+	              <input type="radio" name="" /> 
+	            </span>
+	            <span class="taskN">RW004</span>
+	            <span class="taskD">就餐费用</span>
+	            <span class="taskC">500元</span>
+	         </li>
+	       </ul>
+	       <div class="btn-container">
+              <button class="cancel2">取消</button>
+              <button class="determine2">确定</button>
+           </div>
+		</div>
+		<div class="flag-container"></div>
+		<script src="../libs/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/mui.picker.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/orderingInfo.js"></script>
+		<script type="text/javascript">
+			(function($, doc, jq) {
+				// 移动删除功能
+				var pagex,pagey;
+				var rm = jq('.remove');
+				var tran = jq('.trans');
+				var that = null,falg = false;
+				tran.on('touchstart', function(e){
+					var event = e.originalEvent.changedTouches[0];
+					pagex = event.pageX;
+					pagey = event.pageY;
+					that = jq(this);
+					falg = false;
+					rm.css({'transform' : 'translateX('+-(0)+'px)'});
+					tran.css({'transform' : 'translateX('+-(0)+'px)'});
+					
+					
+					
+					
+				}).on('touchend', function(){
+					if(!falg){
+						rm.css({'transform' : 'translateX('+-(0)+'px)'});
+						tran.css({'transform' : 'translateX('+-(0)+'px)'});
+						falg = false;
+					}else{
+						that.next().css({'transform' : 'translateX('+-(35)+'px)'});
+						that.css({'transform' : 'translateX('+-(35)+'px)'});
+					}
+				});
+				
+				jq('.right ul li').on('touchmove', function(e){
+						var x, y;
+						var event = e.originalEvent.changedTouches[0];
+						pageMoveX = event.pageX;
+						x = pageMoveX - pagex;
+						y = event.pageY - pagey;
+						if(Math.abs(x)<Math.abs(y)){
+							
+						   return
+						}
+						e.preventDefault();
+						
+						
+						if(x<0){
+							x =  Math.abs(x)>=70 ? 70 : Math.abs(x);
+							if(x>=70){
+								falg = true;
+							}
+							that.next().css({'transform' : 'translateX('+-(x/2)+'px)'});
+							that.css({'transform' : 'translateX('+-(x/2)+'px)'});
+						
+						}
+					});
+					
+				jq('.remove').on('click', function(){
+					jq(this).parent('li').remove()
+				});
+				
+			//用餐地点选择
+			jq('.mask li').on('click', function(){
+				if(jq(this).attr('check')==1){
+					jq(this).removeClass('active').attr('check', 0);
+				}else{
+					jq(this).addClass('active').attr('check', 1);
+				}
+			});
+			// 用餐地点 确认 与 返回
+			jq('#return').on('click', function(){
+				jq('.mask').animate({'left': '-100%'});
+				var arr = jq('#enter').data('arr');
+				arr = arr == undefined ? [] : arr;
+				jq('.mask li').removeClass('active').attr('check', 0);
+				if(arr.length>0){
+					for(var i = 0; i < arr.length; i++ ){
+						jq('.mask li').eq(arr[i]).addClass('active').attr('check', 1);
+					}
+				}
+			});
+			
+			jq('#enter').on('click', function(){
+				var str = '', arr = [];
+				jq('.mask li').each(function(index, ele){
+					var that= jq(this);
+					if(that.attr('check') == '1' && that.hasClass('active')){
+						str += that.html()+',';
+						arr.push(index);
+					}
+				});
+				jq(this).data('arr',arr.toString());
+				jq('#address').val(str.substr(0,str.length-1));
+				jq('.mask').animate({'left': '-100%'});
+			});
+			//订餐中点击选择按钮
+			jq('#choiceAddr').on('click', function(){
+				jq('.mask').animate({'left': '0'});
+				
+			});
+			
+			
+				
+			//时间插件选择
+	         $.init();
+	         $.ready(function() {
+	          var startTime = document.querySelector('#startTime');
+	          startTime.addEventListener('tap', function() {
+	          	var that = this;
+	            var optionsJson = this.getAttribute('data-options') || '{}';
+	            var options = JSON.parse(optionsJson);
+	            var id = this.getAttribute('id');
+	            var picker = new $.DtPicker(options);
+	            picker.show(function(rs) {             
+	               that.value=rs.value;
+	               picker.dispose();
+	            });
+	          }, false);
+	        });
+	         document.querySelector('.parson').addEventListener('tap', function() {
+	         	var that = this;
+	            var picker1 = new mui.PopPicker(); 
+		        picker1.setData([{value:'zz',text:'小伙子-董事长'},{value:'zz',text:'小胖子-工程师'},{value:'zz',text:'大傻子-跑腿'}]); 
+		        picker1.show(function(rs){
+		            that.value=rs[0].text;
+		        });
+	          }, false);
+	        
+	      })(mui, document, jQuery);
+		</script>
+		<script type="text/javascript">
+          $(document).ready(function(){
+          	  $('.btn-wrap button').eq(1).on('click',function(){
+          	  	var userName = $('#userName').val();
+	                startTime=$('#startTime').val();
+	                userNum  = $('#userNum').val();
+	            if(userName==''){
+	              flag('.flag-container','订餐人不能为空！','1rem',2000,500);
+	              return false;
+	            }else if(startTime==''){
+	              flag('.flag-container','用餐时间不能为空！','1rem',2000,500);
+	              return false;
+	            }else if(userNum==0){
+	              flag('.flag-container','用餐人数不能为0！','1rem',2000,500);
+	              return false;
+	            }else{
+	              window.location.href="waiterOrderInfoConfirm.html";
+	            }
+	        	
+          	  	   
+          	  });
+
+          	  function flag(node,text,h,time,speed){
+		         $(node).html(text).stop().animate({height: h,lineHeight: h,opacity: 1},speed);setTimeout(function(){$(node).html('').stop().animate({height: 0,lineHeight: 0,opacity: 0},speed);},time);
+		        }
+          });
+		</script>
+	</body>
+</html>
